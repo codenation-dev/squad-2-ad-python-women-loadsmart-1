@@ -1,42 +1,67 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1 class="mt-5">HOME</h1>
+<div class="home">
+    <div class="home__filter-container form-group">
+        <div class="form-group home__filter-container__inputs">
+            <label class="col-form-label" for="inputDefault"></label>
+            <input type="text" class="form-control" placeholder="Default input" id="inputDefault">
+        </div>
+        <div class="form-group home__filter-container__inputs">
+            <select class="custom-select">
+                <option selected="">Produção</option>
+                <option value="1">Batata 1</option>
+                <option value="2">Batata 2</option>
+                <option value="3">Batata 3</option>
+            </select>
+        </div>
+        <div class="form-group home__filter-container__inputs">
+            <select class="custom-select">
+                <option selected="">Ordernar por</option>
+                <option value="1">Batata 1</option>
+                <option value="2">Batata 2</option>
+                <option value="3">Batata 3</option>
+            </select>
+        </div>
+        <div class="form-group home__filter-container__inputs">
+            <select class="custom-select">
+                <option selected="">Buscar por</option>
+                <option value="1">Batata 1</option>
+                <option value="2">Batata 2</option>
+                <option value="3">Batata 3</option>
+            </select>
+        </div>
+    </div>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Nome</th>
-            <th>Sobrenome</th>
-            <th>Telefone</th>
-            <th>Categoria</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                <a href="#"> João</a>
-            </td>
-            <td>Miranda</td>
-            <td>35 9 5555-5555</td>
-            <td>Família</td>
-        </tr>
-        <tr>
-            <td>
-                <a href="#"> Leandro</a>
-            </td>
-            <td>Moreira</td>
-            <td>35 9 8888-5555</td>
-            <td>Família</td>
-        </tr>
-        <tr>
-            <td>
-                <a href="#"> Fátima</a>
-            </td>
-            <td>Oliveira</td>
-            <td>35 9 9999-4352</td>
-            <td>Conhecidos</td>
-        </tr>
-    </tbody>
-</table>
+    <table class="table home__log-table">
+        <thead>
+            <tr>
+                <th>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                        <label class="custom-control-label" for="customCheck2"></label>
+                    </div>
+                </th>
+                <th>Level</th>
+                <th>Log</th>
+                <th>Eventos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                        <label class="custom-control-label" for="customCheck2"></label>
+                    </div>
+                </td>
+                <td>
+                    <span class="home__log-table__level-span">batata</span>
+                </td>
+                <td>descrição do log batata</td>
+                <td>1000</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 {% endblock %}

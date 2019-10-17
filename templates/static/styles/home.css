@@ -1,0 +1,21 @@
+.home {
+    display: flex;
+    flex-direction: column;
+}
+
+.home__filter-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    column-gap: 1rem;
+}
+
+.home__filter-container__inputs {
+    display: flex;
+    align-content: center;
+}
+
+.home__log-table__level-span {
+    padding: .5rem;
+    background-color: #1a1a1a;
+    color: #fff;
+}
