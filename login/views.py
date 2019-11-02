@@ -2,11 +2,18 @@ from django.shortcuts import render
 
 # Create your views here.
 
-def login (request):
+
+def login(request):
     return render(request, 'login/index.html')
 
-def home (request):
+
+def home(request):
     return render(request, 'home/index.html')
 
-def register (request):
+
+def register(request):
     return render(request, 'register/index.html')
+
+
+def log_view(request):
+    return render(request, 'log_view/index.html')
