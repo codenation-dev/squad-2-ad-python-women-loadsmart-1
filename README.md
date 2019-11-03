@@ -14,7 +14,7 @@ Found on the idea about being the biggest and famous detective in the world to f
 
 
 ## Getting Started!
-![](https://user-images.githubusercontent.com/33585625/68079638-5fdcb900-fdcb-11e9-9b89-82dfb6076158.gif)s/e81583ef3074170735e71179c3108c40/tenor.gif)
+![](https://user-images.githubusercontent.com/33585625/68079638-5fdcb900-fdcb-11e9-9b89-82dfb6076158.gif)
 
 ### Prerequisites
 
