@@ -3,14 +3,15 @@
 
 # Error Central Elementary!
 
-On modern projects increasingly common the use of architetures based on services or microservices. In these complex environments, errors can be show in differents layers of application (backend, frontend, mobile and desktop) even in distinct services. So, is really important to developers can centralize all the errors registers at one place, where they can monitorize and take more precision decisions about it. In this project we gonna implement one simple system to centralize the error registers of applications.
+On modern projects increasingly common the use of architectures based on services or microservices. In these complex environments, errors can be shown in different layers of an application (backend, frontend, mobile, and desktop) even in distinct services. 
+Therefore, it is important to developers to be able to centralize all the errors registers in one place, where they can monitor and make more precise decisions about those errors. In this project, we are going to implement one simple system to centralize the error registers of applications.
 
 ### Elementary!
 
 Based on Sherlock Holmes stories, we baptized our project with their famous speech:
 > "Elementary, my dear Watson!" 
 
-Created on the idea about being the biggest and famous detective in the world to find and monitorize all the errors!
+Created on the idea of being the biggest and famous detective in the world to find and monitor all the errors!
 
 
 ## Getting Started!
@@ -28,7 +29,7 @@ Postgres
 
 ### Installing
 
-- First create a virtual environment and activate:
+- First, create a virtual environment and activate:
 
 ```
 python3.6 -m venv venv
@@ -63,7 +64,7 @@ For Windows users:
 python manage.py runserver
 ````
 
-- Acessing the application:
+- Accessing the application:
 
 ```
 http://127.0.0.1:8000
@@ -73,5 +74,3 @@ http://127.0.0.1:8000
 ## Running the tests
 
 *Under Construction*
-
-
