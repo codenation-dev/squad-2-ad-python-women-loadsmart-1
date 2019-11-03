@@ -10,7 +10,7 @@ On modern projects increasingly common the use of architetures based on services
 Based on Sherlock Holmes stories, we baptized our project with their famous speech:
 > "Elementary, my dear Watson!" 
 
-Found on the idea about being the biggest and famous detective in the world to find and monitorize all errors!
+Found on the idea about being the biggest and famous detective in the world to find and monitorize all the errors!
 
 
 ## Getting Started!
@@ -69,6 +69,7 @@ python manage.py runserver
 http://127.0.0.1:8000
 ```
 
+![](https://media.tenor.com/images/b01ca348dc027a51a7b9ae84601ab964/tenor.gif)
 ## Running the tests
 
 *Under Construction*
