@@ -6,7 +6,9 @@
 On modern projects increasingly common the use of architetures based on services or microservices. In these complex environments, errors can be show in differents layers of application (backend, frontend, mobile and desktop) even in distinct services. So, is really important to developers can centralize all the errors registers at one place, where they can monitorize and take more precision decisions about it. In this project we gonna implement one simple system to centralize the error registers of applications.
 
 ### Elementary!
-![](https://tenor.com/view/elementary-watson-sherlock-holmes-gif-12855091)
+
+![](https://user-images.githubusercontent.com/33585625/68079639-610de600-fdcb-11e9-9d5b-cebb17146cc2.gif)
+
 Based on Sherlock Holmes stories, we baptized our project with their famous speech:
 > "Elementary, my dear Watson!" 
 
@@ -14,7 +16,7 @@ Found on the idea about being the biggest and famous detective in the world to f
 
 
 ## Getting Started!
-![](https://media.tenor.com/images/e81583ef3074170735e71179c3108c40/tenor.gif)
+![](https://media.tenor.com/image![](https://user-images.githubusercontent.com/33585625/68079638-5fdcb900-fdcb-11e9-9b89-82dfb6076158.gif)s/e81583ef3074170735e71179c3108c40/tenor.gif)
 
 ### Prerequisites
 
