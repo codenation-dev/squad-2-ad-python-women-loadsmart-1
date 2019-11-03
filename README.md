@@ -3,8 +3,8 @@
 
 # Error Central Elementary!
 
-On modern projects increasingly common the use of architectures based on services or microservices. In these complex environments, errors can be shown in different layers of an application (backend, frontend, mobile, and desktop) even in distinct services. 
-Therefore, it is important to developers to be able to centralize all the errors registers in one place, where they can monitor and make more precise decisions about those errors. In this project, we are going to implement one simple system to centralize the error registers of applications.
+On modern projects, it is increasingly common the use of architectures based on services or microservices. In these complex environments, errors can be shown in different layers of an application (backend, frontend, mobile, and desktop) even in distinct services. 
+Therefore, developers need to be able to centralize all the errors registers in one place, where they can monitor and make more precise decisions about those errors. In this project, we are going to implement one simple system to centralize the error registers of applications.
 
 ### Elementary!
 
@@ -29,7 +29,7 @@ Postgres
 
 ### Installing
 
-- First, create a virtual environment and activate:
+- First create a virtual environment and activate:
 
 ```
 python3.6 -m venv venv
@@ -64,7 +64,7 @@ For Windows users:
 python manage.py runserver
 ````
 
-- Accessing the application:
+- Acessing the application:
 
 ```
 http://127.0.0.1:8000
@@ -74,3 +74,5 @@ http://127.0.0.1:8000
 ## Running the tests
 
 *Under Construction*
+
+
