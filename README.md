@@ -3,7 +3,7 @@
 
 # Error Central Elementary!
 
-On modern projects increasingly common the use of architetures based on services or microservices. In these complex environments, errors can be show in differents layers of application (backend, frontend, mobile and desktop) even in distintc services. So, is really important to developers can centralize all the errors registers at one place, where they can monitorize and take more precision decisions about it. In this project we gonna implement one simple system to centralize the error registers of applications.
+On modern projects increasingly common the use of architetures based on services or microservices. In these complex environments, errors can be show in differents layers of application (backend, frontend, mobile and desktop) even in distinct services. So, is really important to developers can centralize all the errors registers at one place, where they can monitorize and take more precision decisions about it. In this project we gonna implement one simple system to centralize the error registers of applications.
 
 ### Elementary!
 ![](https://tenor.com/view/elementary-watson-sherlock-holmes-gif-12855091)
