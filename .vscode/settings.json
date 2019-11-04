@@ -2,5 +2,5 @@
     "python.linting.pylintEnabled": true,
     "python.linting.pycodestyleEnabled": false,
     "python.linting.enabled": true,
-    "python.pythonPath": "/home/amanda/codenation/venv/bin/python"
+    "python.pythonPath": "C:\\Users\\Tabatha\\AppData\\Local\\Programs\\Python\\Python37\\python.exe"
 }
