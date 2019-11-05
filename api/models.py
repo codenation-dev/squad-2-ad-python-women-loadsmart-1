@@ -5,7 +5,21 @@ from django.core.validators import validate_ipv4_address
 from users.models import CustomUser
 
 
+class EnvironmentManager(models.Manager):
+    pass
+
+
+class AgentManager(models.Manager):
+    pass
+
+
+class EventManager(models.Manager):
+    def get_events_by_level(self, event_level):
+        return self.get_queryset().filter(level=event_level)
+
+
 class Environment(models.Model):
+    objects = EnvironmentManager()
     name = models.CharField(max_length=15)
 
     def __str__(self):
@@ -13,6 +27,7 @@ class Environment(models.Model):
 
 
 class Agent(models.Model):
+    objects = AgentManager()
     env = models.ForeignKey(
             Environment,
             on_delete=models.deletion.DO_NOTHING,
@@ -30,6 +45,7 @@ class Agent(models.Model):
 
 
 class Event(models.Model):
+    objects = EventManager()
     EVENT_TYPES = [
         ('C', 'Critical'),
         ('D', 'Debug'),
