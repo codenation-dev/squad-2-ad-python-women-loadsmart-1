@@ -1,6 +1,6 @@
 <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
-        <a class="navbar-brand" href="{% url 'home'%}">Error Center</a>
+        <a class="navbar-brand" href="{% url 'events_list'%}">Error Center</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
             aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -13,10 +13,10 @@
    <div class="header">  
         <!-- Fix when authentication is completed -->
         {% if user.is_authenticated %}
-        <h1 class="navbar-brand mt-3 mb-3">Bem-vindo, Usuário. Seu token é: sjkfdhkshdfsa.</h1>
+        <h1 class="navbar-brand mt-3 mb-3">Bem-vindo, Usuário. Seu token é: {{ user.token }}.</h1>
         {% endif %}
         <div class="header__logo">
-            <img src="../static/aPuc1f9.png" height="80">
+            <img src="/static/aPuc1f9.png" height="80">
         </div> 
     </div>
 </nav>

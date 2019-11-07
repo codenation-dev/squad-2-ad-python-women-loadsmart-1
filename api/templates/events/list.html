@@ -47,19 +47,28 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck2">
-                        <label class="custom-control-label" for="customCheck2"></label>
-                    </div>
-                </td>
-                <td>
-                    <span class="home__log-table__level-span">batata</span>
-                </td>
-                <td>descrição do log batata</td>
-                <td>1000</td>
-            </tr>
+            {% for event in object_list %}
+                <tr>
+                    <td>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck2">
+                            <label class="custom-control-label" for="customCheck2"></label>
+                        </div>
+                    </td>
+                    <td>
+                        <!-- <span class="home__log-table__level-span">batata</span> -->
+                        <span class="home__log-table__level-span">{{ event.get_level_display }}</span>
+                    </td>
+                    <td><a href="{% url 'events_detail' event.pk %}">{{ event.details }}<br>{{ event.agent.address }}<br>{{ event.date }}</a></td>
+                    <td>{{ event.user }}</td>
+                </tr>
+                {% empty %}
+                    <tr>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                {% endfor %}
         </tbody>
     </table>
 </div>
