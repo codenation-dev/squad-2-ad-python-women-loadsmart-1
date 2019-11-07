@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -41,6 +40,9 @@ INSTALLED_APPS = [
 
     #External apps
     'rest_framework',
+
+    'users',
+    'api',
 ]
 
 MIDDLEWARE = [
@@ -79,11 +81,17 @@ WSGI_APPLICATION = 'error_center.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'final_project',
+        'USER': 'squad2admin',
+        'PASSWORD': 'codenation',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
+
+AUTH_USER_MODEL = 'users.CustomUser'
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
