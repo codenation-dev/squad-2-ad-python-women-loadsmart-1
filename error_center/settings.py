@@ -36,9 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 'login.apps.LoginConfig',
 
-    #External apps
+    # External apps
     'rest_framework',
 
     'users',
@@ -92,6 +91,13 @@ DATABASES = {
 
 
 AUTH_USER_MODEL = 'users.CustomUser'
+
+"""Changes the default LOGIN_URL (/accounts/login/).
+The LOGIN_URL is used by @login_required and LoginRequiredMixin.
+https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-LOGIN_URL
+https://wsvincent.com/django-tips-user-permissions/
+"""
+LOGIN_URL = '/account/login/'
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators

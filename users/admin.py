@@ -26,7 +26,7 @@ class CustomUserAdmin(UserAdmin):
             )
             }
         ),
-        ('Permissions', {'fields': ('token', 'is_staff', 'is_active','groups')}),
+        ('Permissions', {'fields': ('is_staff', 'is_active','groups')}),
         ('Activity', {
             'fields': (
                 'last_login','date_joined',

@@ -18,6 +18,9 @@ from django.urls import path, include
 
 urlpatterns = [
     path('', include('api.urls')),
-    path('login/', include('users.urls')),
+    path('account/', include('users.urls')),
     path('admin/', admin.site.urls),
+
+    # REST FRAMEWORK URLS
+    path('api/events/', include('api.api_events.urls', 'event_api')),
 ]
