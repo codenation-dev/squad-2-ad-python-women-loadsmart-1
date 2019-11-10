@@ -58,6 +58,7 @@ class Event(models.Model):
             choices=EVENT_TYPES,
             null=True
             )
+    title = models.CharField(max_length=150, default="Undefined")
     details = models.TextField(null=True)
     archived = models.BooleanField(default=False)
     date = models.DateTimeField()
@@ -79,4 +80,4 @@ class Event(models.Model):
         return super(Event, self).save(*args, **kwargs)
 
     def __str__(self):
-        return self.date
+        return self.details

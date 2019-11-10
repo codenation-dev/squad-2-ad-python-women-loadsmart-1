@@ -2,10 +2,25 @@
     width: 100%;
     padding: 0 2rem;
     display: flex;
-    align-content: center;
+    align-items: center;
     justify-content: space-between;
 }
 
-.header__logo {
-    margin-left: auto;
+.header .menu-icon {
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.header__profile-menu {
+    padding: 0 1rem;
+}
+
+.header__profile-menu__text {
+    color: #1a1a1a;
+}
+
+.header .dropdown-menu {
+    min-width: 10rem;
+    width: 15rem;
 }

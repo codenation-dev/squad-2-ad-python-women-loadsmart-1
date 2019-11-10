@@ -1,22 +1,24 @@
-<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container">
-        <a class="navbar-brand" href="{% url 'home'%}">Error Center</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </div>
-</nav> -->
-
 <!-- Favor seguir as regras WCGA de acessibilidade, é um ponto importante. -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
    <div class="header">  
+        <div>
+            <a href="{% url 'events_list' %}">
+                <img src="/static/aPuc1f9.png" height="80">
+            </a>
+        </div>
+
         <!-- Fix when authentication is completed -->
         {% if user.is_authenticated %}
-        <h1 class="navbar-brand mt-3 mb-3">Bem-vindo, Usuário. Seu token é: sjkfdhkshdfsa.</h1>
+        <div class="nav-item dropdown">
+            <i class="fas fa-user menu-icon" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"></i>
+            <div class="dropdown-menu dropdown-menu-right">
+                <div class="header__profile-menu">
+                    <span class="header__profile-menu__text">Welcome, {{ user }}.<br/>Your token is: {{user.get_token}}.</span>
+                </div>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+            </div>
+        </div>
         {% endif %}
-        <div class="header__logo">
-            <img src="../static/aPuc1f9.png" height="80">
-        </div> 
     </div>
 </nav>
