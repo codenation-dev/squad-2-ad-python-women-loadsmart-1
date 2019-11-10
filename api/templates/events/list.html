@@ -46,7 +46,7 @@
                     <td>
                         <span class="home__log-table__level-span">{{ event.get_level_display }}</span>
                     </td>
-                    <td><a href="{% url 'events_detail' event.pk %}">{{ event.details }}<br>{{ event.agent.address }}<br>{{ event.date }}</a></td>
+                    <td><a href="{% url 'events_detail' event.pk %}">{{ event.title }}<br>{{ event.agent.address }}<br>{{ event.date }}</a></td>
                     <td>{{ event.user }}</td>
                 </tr>
                 {% empty %}
