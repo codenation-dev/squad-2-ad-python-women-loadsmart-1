@@ -14,25 +14,23 @@
                 {{ object.date }}
             </h3>
         </div>
-        <a href="{% url 'events_list' %}"></a>
-            <button type="button" 
-                class="btn btn-outline-secondary">
-                Voltar
-            </button>
+        <a href="{% url 'events_list' %}"
+            class="btn btn-outline-secondary">
+            Back
         </a>
     </div>
     <div class="log-view__content mt-5">
         <div>
-            <h4>Título</h4>
+            <h4>Title</h4>
             <p>{{ object.title }}</p>
-            <h4>Detalhes</h4>
+            <h4>Details</h4>
             <p>{{ object.details }}</forbidden></p>
         </div>
         <div>
             <p class="log-view__level-box">{{ object.get_level_display }}</span>
-            <h5>Eventos</h5>
+            <h5>Events</h5>
             <p>????</p>
-            <h5>Coletado por</h5>
+            <h5>By</h5>
             <p>{{ object.user.token }}</p>
         </div>
     </div>
