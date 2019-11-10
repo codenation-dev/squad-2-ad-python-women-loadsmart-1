@@ -13,7 +13,7 @@
             <i class="fas fa-user menu-icon" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"></i>
             <div class="dropdown-menu dropdown-menu-right">
                 <div class="header__profile-menu">
-                    <h6>Welcome, {{ user }}.<br/>Your token is: ????.</h6>
+                    <span class="header__profile-menu__text">Welcome, {{ user }}.<br/>Your token is: {{user.get_token}}.</span>
                 </div>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>

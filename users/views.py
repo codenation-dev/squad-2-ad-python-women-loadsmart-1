@@ -48,6 +48,7 @@ def register(request):
 
     if request.POST:
         form = CustomUserCreationForm(request.POST)
+
         if form.is_valid():
             form.save()
             email = form.cleaned_data.get('email')

@@ -13,12 +13,11 @@
 }
 
 .header__profile-menu {
-    padding: 0 .5rem;
+    padding: 0 1rem;
 }
 
 .header__profile-menu__text {
-    color: #545454;
-    font-size: .9rem;
+    color: #1a1a1a;
 }
 
 .header .dropdown-menu {
