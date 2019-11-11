@@ -49,13 +49,13 @@
                     <td><a href="{% url 'events_detail' event.pk %}">{{ event.title }}<br>{{ event.agent.address }}<br>{{ event.date }}</a></td>
                     <td>{{ event.user }}</td>
                 </tr>
-                {% empty %}
-                    <tr>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                    </tr>
-                {% endfor %}
+            {% empty %}
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            {% endfor %}
         </tbody>
     </table>
 </div>
