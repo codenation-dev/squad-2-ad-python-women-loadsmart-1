@@ -1,6 +1,7 @@
 from rest_framework import status
 from rest_framework.response import Response
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated
 
 from .serializers import EventSerializer
 from users.models import CustomUser
@@ -8,19 +9,21 @@ from api.models import Event, Agent, Environment
 
 
 @api_view(['GET', ])
+@permission_classes((IsAuthenticated,))
 def api_detail_event_view(request, level):
 
-    try:
-        event = Event.objects.get(level=level)
-    except Event.DoesNotExist:
+    events = Event.objects.filter(level=level)
+    # except Event.DoesNotExist:
+    if events.count() == 0:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == "GET":
-        serializer = EventSerializer(event)
+        serializer = EventSerializer(events, many=True)
         return Response(serializer.data)
 
 
 @api_view(['POST', ])
+@permission_classes((IsAuthenticated,))
 def api_create_event_view(request):
 
     # Get user's IP

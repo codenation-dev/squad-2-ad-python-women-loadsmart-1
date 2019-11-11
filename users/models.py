@@ -21,7 +21,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     date_joined = models.DateTimeField(auto_now_add=True)
     first_name = models.CharField(_('first name'), max_length=30)
     last_name = models.CharField(_('last name'), max_length=30)
-    token = models.CharField(max_length=128, null=True, unique=True)
+    # token = models.CharField(max_length=128, null=True, unique=True)
     last_login = models.DateTimeField(auto_now=True)
 
     USERNAME_FIELD = 'email'
@@ -29,8 +29,10 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 
     objects = CustomUserManager()
 
+    @property
     def get_token(self):
-        return f"{self.token}"
+        token = Token.objects.get(user_id=self.pk)
+        return f"{token}"
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
