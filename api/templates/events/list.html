@@ -44,7 +44,7 @@
             {% for event in object_list %}
                 <tr>
                     <td>
-                        <span class="home__log-table__level-span">{{ event.get_level_display }}</span>
+                        <p class="home__log-table__level-box">{{ event.get_level_display }}</p>
                     </td>
                     <td><a href="{% url 'events_detail' event.pk %}">{{ event.title }}<br>{{ event.agent.address }}<br>{{ event.date }}</a></td>
                     <td>{{ event.user }}</td>

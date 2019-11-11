@@ -22,5 +22,5 @@
 
 .header .dropdown-menu {
     min-width: 10rem;
-    width: 15rem;
+    width: max-content;
 }
