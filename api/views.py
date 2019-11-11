@@ -1,5 +1,6 @@
 from django.views.generic import ListView, DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.shortcuts import redirect
 
 from .models import Event
 
@@ -7,6 +8,8 @@ from .models import Event
 class EventsView(LoginRequiredMixin, ListView):
     model = Event
     template_name = 'events/list.html'
+    queryset = Event.objects.exclude(archived=True).order_by('-date')
+    # paginate_by = 5
 
     """ def get_queryset(self, *args, **kwargs):
         search_text: self.request.GET.get('search_text', None)
@@ -32,3 +35,12 @@ class EventsView(LoginRequiredMixin, ListView):
 class EventDetailView(LoginRequiredMixin, DetailView):
     model = Event
     template_name = 'events/detail.html'
+
+
+def mark_as_archived(request):
+    if request.method == "POST":
+        selected_events = request.POST.getlist('arch_checkbox')
+        print(selected_events)
+        amount_updated = Event.objects.filter(id__in=selected_events).update(archived=True)
+        print("Number of events archived: {amount_updated}")
+    return redirect('events_list')

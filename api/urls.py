@@ -5,6 +5,7 @@ from . import views
 
 urlpatterns = [
     path('', views.EventsView.as_view(), name='events_list'),
+    path('events/archive', views.mark_as_archived, name='archive'),
     # path('events/detail', views.events_detail, name='events_detail'),
     url(
         r'events/detail/(?P<pk>[-\w]+)',

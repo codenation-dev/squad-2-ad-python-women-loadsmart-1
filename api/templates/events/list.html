@@ -35,9 +35,14 @@
         </div>
     </div>
 
+    <form action={% url 'archive' %}  method="POST">
+    {% csrf_token %}
     <table class="table home__log-table">
         <thead>
             <tr>
+                <th>
+                    <a href="{% url 'archive' %}"><button name="archive" class="btn btn-primary btn-sm">Arquivar</button></a>
+                </th>
                 <th>Level</th>
                 <th>Log</th>
                 <th>Events</th>
@@ -46,6 +51,12 @@
         <tbody>
             {% for event in object_list %}
                 <tr>
+                    <td>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="CheckMe{{ event.pk }}" value="{{ event.pk }}" name="arch_checkbox">
+                            <label class="custom-control-label" for="CheckMe{{ event.pk }}"></label>
+                        </div>
+                    </td>
                     <td>
                         <p class="home__log-table__level-box">{{ event.get_level_display }}</p>
                     </td>
@@ -61,5 +72,6 @@
             {% endfor %}
         </tbody>
     </table>
+    </form>
 </div>
 {% endblock %}
