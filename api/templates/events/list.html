@@ -50,7 +50,7 @@
                         <p class="home__log-table__level-box">{{ event.get_level_display }}</p>
                     </td>
                     <td><a href="{% url 'events_detail' event.pk %}">{{ event.title }}<br>{{ event.agent.address }}<br>{{ event.date }}</a></td>
-                    <td>{{ event.user }}</td>
+                    <td>{{ event.get_num_of_events_from_agent }}</td>
                 </tr>
             {% empty %}
                 <tr>

@@ -81,3 +81,12 @@ class Event(models.Model):
 
     def __str__(self):
         return self.details
+
+    @property
+    def get_num_of_events_from_agent(self):
+        print(f'Filtering logs of type {self.level} from {self.agent}')
+        amount = Event.objects.filter(
+            agent=self.agent,
+            level=self.level
+        ).count()
+        return amount

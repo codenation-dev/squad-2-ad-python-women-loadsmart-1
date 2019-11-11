@@ -29,7 +29,7 @@
         <div>
             <p class="log-view__level-box">{{ object.get_level_display }}</span>
             <h5>Events</h5>
-            <p>????</p>
+            <p>{{ object.get_num_of_events_from_agent }}</p>
             <h5>By</h5>
             <p>{{ object.user.get_token }}</p>
         </div>
