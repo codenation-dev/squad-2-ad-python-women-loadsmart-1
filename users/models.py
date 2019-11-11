@@ -21,7 +21,6 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     date_joined = models.DateTimeField(auto_now_add=True)
     first_name = models.CharField(_('first name'), max_length=30)
     last_name = models.CharField(_('last name'), max_length=30)
-    # token = models.CharField(max_length=128, null=True, unique=True)
     last_login = models.DateTimeField(auto_now=True)
 
     USERNAME_FIELD = 'email'
