@@ -10,5 +10,6 @@ class TestSerializer(APITestCase):
         test_agent = Agent.objects.create(env=test_env)
         test_user = CustomUser.objects.create(first_name="Marcela", last_name="Vieira", email="marcela@gmail.com", password="newpassword654")
         test_event = Event.objects.create(level="C", agent=test_agent, user=test_user)
-        # address =
-        self.assertTrue(True)
+
+        address = get_address_from_agent(self, test_event)
+        self.assertEqual(address, "255.255.255.255")
