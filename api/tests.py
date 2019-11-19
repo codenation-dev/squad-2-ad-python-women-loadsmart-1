@@ -2,7 +2,7 @@ from django.test import TestCase
 from rest_framework.test import APITestCase
 from api.models import Event, Agent, Environment
 from users.models import CustomUser
-from api.serializers import EventSerializer
+from api.api_events.serializers import EventSerializer
 
 # Create your tests here.
 class TestSerializer(APITestCase):
